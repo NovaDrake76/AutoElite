@@ -1,0 +1,92 @@
+{
+  "vehicles": [
+    {
+      "id": "1",
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": 2023,
+      "cor": "Prata",
+      "tipo": "Sedan",
+      "quilometragem": 0,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/Mk33M/s3/toyota-corolla-altis-premium-hybrid.jpg"
+    },
+    {
+      "id": "2",
+      "marca": "Honda",
+      "modelo": "HR-V",
+      "ano": 2023,
+      "cor": "Preto",
+      "tipo": "SUV",
+      "quilometragem": 5000,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/Y99Gog/s3/honda-hr-v-exl-2024.jpg"
+    },
+    {
+      "id": "3",
+      "marca": "Volkswagen",
+      "modelo": "Polo",
+      "ano": 2024,
+      "cor": "Branco",
+      "tipo": "Hatch",
+      "quilometragem": 1500,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/qkqwL/s3/vw-polo-track-2023.jpg"
+    },
+    {
+      "id": "4",
+      "marca": "Chevrolet",
+      "modelo": "S10",
+      "ano": 2023,
+      "cor": "Vermelho",
+      "tipo": "Pickup",
+      "quilometragem": 3000,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/0eE3Mm/s3/chevrolet-s10-z71-2023.jpg"
+    },
+    {
+      "id": "5",
+      "marca": "Hyundai",
+      "modelo": "HB20",
+      "ano": 2024,
+      "cor": "Azul",
+      "tipo": "Hatch",
+      "quilometragem": 0,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/kJZ1L/s3/hyundai-hb20-platinum-plus-2023.jpg"
+    },
+    {
+      "id": "6",
+      "marca": "Fiat",
+      "modelo": "Strada",
+      "ano": 2023,
+      "cor": "Cinza",
+      "tipo": "Pickup",
+      "quilometragem": 2500,
+      "portas": 2,
+      "imagem": "https://cdn.motor1.com/images/mgl/VAknq/s3/fiat-strada-ranch-2022.jpg"
+    },
+    {
+      "id": "7",
+      "marca": "Jeep",
+      "modelo": "Compass",
+      "ano": 2024,
+      "cor": "Verde",
+      "tipo": "SUV",
+      "quilometragem": 1000,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/qkqvz/s3/jeep-compass-2022.jpg"
+    },
+    {
+      "id": "8",
+      "marca": "Renault",
+      "modelo": "Kwid",
+      "ano": 2023,
+      "cor": "Laranja",
+      "tipo": "Hatch",
+      "quilometragem": 500,
+      "portas": 4,
+      "imagem": "https://cdn.motor1.com/images/mgl/2NLb6/s3/renault-kwid-2022-teste.jpg"
+    }
+  ]
+}
