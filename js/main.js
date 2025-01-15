@@ -1,6 +1,5 @@
 let vehicles = [];
 
-// Função para carregar veículos
 async function loadVehicles() {
   const storedVehicles = localStorage.getItem("vehicles");
   if (storedVehicles) {
@@ -20,12 +19,10 @@ async function loadVehicles() {
   updateVehicleList();
   updateDeleteList();
 }
-// Função para salvar veículos no localStorage
 function saveVehicles() {
   localStorage.setItem("vehicles", JSON.stringify(vehicles));
 }
 
-// Função para criar card de veículo
 function createVehicleCard(vehicle, isDeletePage = false) {
   const card = document.createElement("div");
   card.className = "col-md-4 mb-4";
@@ -55,7 +52,6 @@ function createVehicleCard(vehicle, isDeletePage = false) {
   return card;
 }
 
-// Função para atualizar lista de veículos
 function updateVehicleList() {
   const vehicleList = document.getElementById("vehicle-list");
   if (vehicleList) {
@@ -66,7 +62,6 @@ function updateVehicleList() {
   }
 }
 
-// Função para atualizar lista de exclusão
 function updateDeleteList() {
   const deleteList = document.getElementById("vehicle-delete-list");
   if (deleteList) {
@@ -77,7 +72,19 @@ function updateDeleteList() {
   }
 }
 
-// Função para registrar novo veículo
+class Vehicle {
+  constructor(marca, modelo, ano, cor, tipo, quilometragem, portas, imagem) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.ano = ano;
+    this.cor = cor;
+    this.tipo = tipo;
+    this.quilometragem = quilometragem;
+    this.portas = portas;
+    this.imagem = imagem;
+  }
+}
+
 function registerVehicle(event) {
   event.preventDefault();
 
@@ -92,7 +99,6 @@ function registerVehicle(event) {
     document.getElementById("imagem").value
   );
 
-  // Validações
   if (!validateVehicle(newVehicle)) {
     return;
   }
@@ -100,14 +106,11 @@ function registerVehicle(event) {
   vehicles.push(newVehicle);
   saveVehicles();
 
-  // Limpa o formulário
   event.target.reset();
 
-  // Mostra mensagem de sucesso
   showAlert("Veículo cadastrado com sucesso!", "success");
 }
 
-// Função para validar veículo
 function validateVehicle(vehicle) {
   if (
     !vehicle.marca ||
@@ -141,7 +144,6 @@ function validateVehicle(vehicle) {
   return true;
 }
 
-// Função para deletar veículo
 function deleteVehicle(id) {
   if (confirm("Tem certeza que deseja excluir este veículo?")) {
     vehicles = vehicles.filter((vehicle) => vehicle.id !== id);
@@ -151,7 +153,6 @@ function deleteVehicle(id) {
   }
 }
 
-// Função para mostrar alertas
 function showAlert(message, type) {
   const alertDiv = document.createElement("div");
   alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-4`;
@@ -162,17 +163,14 @@ function showAlert(message, type) {
     `;
   document.body.appendChild(alertDiv);
 
-  // Remove o alerta após 3 segundos
   setTimeout(() => {
     alertDiv.remove();
   }, 3000);
 }
 
-// Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
   loadVehicles();
 
-  // Configura o formulário de registro
   const registrationForm = document.getElementById("vehicle-form");
   if (registrationForm) {
     registrationForm.addEventListener("submit", registerVehicle);
