@@ -9,7 +9,7 @@
       "tipo": "Sedan",
       "quilometragem": 0,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/Mk33M/s3/toyota-corolla-altis-premium-hybrid.jpg"
+      "imagem": "/images/carro.png"
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
       "tipo": "SUV",
       "quilometragem": 5000,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/Y99Gog/s3/honda-hr-v-exl-2024.jpg"
+      "imagem": "/images/carro2.png"
     },
     {
       "id": "3",
@@ -31,7 +31,7 @@
       "tipo": "Hatch",
       "quilometragem": 1500,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/qkqwL/s3/vw-polo-track-2023.jpg"
+      "imagem": "/images/carro3.png"
     },
     {
       "id": "4",
@@ -42,7 +42,7 @@
       "tipo": "Pickup",
       "quilometragem": 3000,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/0eE3Mm/s3/chevrolet-s10-z71-2023.jpg"
+      "imagem": "/images/carro.png"
     },
     {
       "id": "5",
@@ -53,7 +53,7 @@
       "tipo": "Hatch",
       "quilometragem": 0,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/kJZ1L/s3/hyundai-hb20-platinum-plus-2023.jpg"
+      "imagem": "/images/carro2.png"
     },
     {
       "id": "6",
@@ -64,7 +64,7 @@
       "tipo": "Pickup",
       "quilometragem": 2500,
       "portas": 2,
-      "imagem": "https://cdn.motor1.com/images/mgl/VAknq/s3/fiat-strada-ranch-2022.jpg"
+      "imagem": "/images/carro3.png"
     },
     {
       "id": "7",
@@ -75,7 +75,7 @@
       "tipo": "SUV",
       "quilometragem": 1000,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/qkqvz/s3/jeep-compass-2022.jpg"
+      "imagem": "/images/carro.png"
     },
     {
       "id": "8",
@@ -86,7 +86,7 @@
       "tipo": "Hatch",
       "quilometragem": 500,
       "portas": 4,
-      "imagem": "https://cdn.motor1.com/images/mgl/2NLb6/s3/renault-kwid-2022-teste.jpg"
+      "imagem": "/images/carro2.png"
     }
   ]
 }
