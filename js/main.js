@@ -10,12 +10,23 @@ async function loadVehicles() {
         "https://my-json-server.typicode.com/NovaDrake76/AutoElite/db"
       );
       const data = await response.json();
-      vehicles = data.vehicles;
+      vehicles = data.vehicles.map((vehicle) => ({
+        ...vehicle,
+        id: vehicle.id || crypto.randomUUID(),
+      }));
       console.log("Veículos carregados com sucesso:", vehicles);
+      saveVehicles();
     } catch (error) {
       console.error("Erro ao carregar veículos:", error);
     }
   }
+
+  vehicles = vehicles.map((vehicle) => ({
+    ...vehicle,
+    id: vehicle.id || crypto.randomUUID(),
+  }));
+
+  saveVehicles();
   updateVehicleList();
   updateDeleteList();
 }
@@ -74,6 +85,7 @@ function updateDeleteList() {
 
 class Vehicle {
   constructor(marca, modelo, ano, cor, tipo, quilometragem, portas, imagem) {
+    this.id = crypto.randomUUID();
     this.marca = marca;
     this.modelo = modelo;
     this.ano = ano;
@@ -105,9 +117,10 @@ function registerVehicle(event) {
 
   vehicles.push(newVehicle);
   saveVehicles();
+  updateVehicleList();
+  updateDeleteList();
 
   event.target.reset();
-
   showAlert("Veículo cadastrado com sucesso!", "success");
 }
 
@@ -148,6 +161,7 @@ function deleteVehicle(id) {
   if (confirm("Tem certeza que deseja excluir este veículo?")) {
     vehicles = vehicles.filter((vehicle) => vehicle.id !== id);
     saveVehicles();
+    updateVehicleList();
     updateDeleteList();
     showAlert("Veículo excluído com sucesso!", "success");
   }
